@@ -94,5 +94,5 @@ if (!class_exists($route['controller']))
         foreach ($vars as $var => $val) $attribute[$val] = isset($paths[$var]) == true ? $paths[$var] : null ;
     }
   }
-  $controller->$route['action'](isset($attribute) == true ? $attribute : false);
+  $controller->{$route['action']}(isset($attribute) == true ? $attribute : false);
 }
